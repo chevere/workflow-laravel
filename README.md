@@ -2,11 +2,11 @@
 
 ![Chevere](chevere.svg)
 
-[![Build](https://img.shields.io/github/actions/workflow/status/chevere/workflow-laravel/test.yml?branch=%branch%&style=flat-square)](https://github.com/chevere/workflow-laravel/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/chevere/workflow-laravel/test.yml?branch=1.0&style=flat-square)](https://github.com/chevere/workflow-laravel/actions)
 ![Code size](https://img.shields.io/github/languages/code-size/chevere/workflow-laravel?style=flat-square)
 [![Apache-2.0](https://img.shields.io/github/license/chevere/workflow-laravel?style=flat-square)](LICENSE)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%209-blueviolet?style=flat-square)](https://phpstan.org/)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fchevere%2Fworkflow-laravel%2F%branch%)](https://dashboard.stryker-mutator.io/reports/github.com/chevere/workflow-laravel/%branch%)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fchevere%2Fworkflow-laravel%2F1.0)](https://dashboard.stryker-mutator.io/reports/github.com/chevere/workflow-laravel/1.0)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chevere_workflow-laravel&metric=alert_status)](https://sonarcloud.io/dashboard?id=chevere_workflow-laravel)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=chevere_workflow-laravel&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=chevere_workflow-laravel)
@@ -15,8 +15,6 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=chevere_workflow-laravel&metric=coverage)](https://sonarcloud.io/dashboard?id=chevere_workflow-laravel)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=chevere_workflow-laravel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=chevere_workflow-laravel)
 [![CodeFactor](https://www.codefactor.io/repository/github/chevere/workflow-laravel/badge)](https://www.codefactor.io/repository/github/chevere/workflow-laravel)
-
----
 
 ## Summary
 
