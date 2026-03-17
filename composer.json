@@ -1,6 +1,6 @@
 {
-    "name": "chevere/reponame",
-    "description": "A chevere reponame package",
+    "name": "chevere/workflow-laravel",
+    "description": "Laravel integration for Chevere Workflow.",
     "homepage": "https://chevere.org",
     "type": "library",
     "license": "Apache-2.0",
@@ -12,30 +12,45 @@
         }
     ],
     "require": {
-        "chevere/chevere": "^4.0.0"
+        "php": "^8.1",
+        "chevere/workflow": "^3.0.x-dev",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0"
     },
     "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^10.5",
-        "symplify/easy-coding-standard": "^12.5"
+        "symplify/easy-coding-standard": "^12.5",
+        "xrdebug/php": "^3.0"
     },
     "autoload": {
-        "files": [
-            "src/functions.php"
-        ],
         "psr-4": {
-            "Chevere\\%namespace%\\": "src/"
+            "Chevere\\Workflow\\Laravel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Chevere\\Tests\\": "tests/"
+            "Chevere\\Workflow\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chevere\\Workflow\\Laravel\\WorkflowServiceProvider"
+            ],
+            "aliases": {
+                "Workflow": "Chevere\\Workflow\\Laravel\\Facades\\Workflow"
+            }
         }
     },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
     },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "scripts": {
         "all": [
             "composer phpstan",

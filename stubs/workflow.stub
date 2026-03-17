@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ namespace }};
+
+use Chevere\Workflow\Interfaces\WorkflowInterface;
+use Chevere\Workflow\Laravel\AbstractWorkflow;
+use function Chevere\Workflow\sync;
+use function Chevere\Workflow\variable;
+use function Chevere\Workflow\workflow;
+
+class {{ class }} extends AbstractWorkflow
+{
+    protected function definition(): WorkflowInterface
+    {
+        return workflow(
+            // Define your jobs here:
+            //
+            // example: sync(
+            //     fn(string $input): string => "Processed: {$input}",
+            //     input: variable('myInput'),
+            // ),
+        );
+    }
+}
