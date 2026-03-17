@@ -18,7 +18,7 @@
 
 ## Summary
 
-**Chevere Workflow for Laravel** is a PHP library for building and executing multi-step procedures with automatic dependency resolution. Define independent jobs that can run synchronously or asynchronously, pass data between them using typed responses, and let the engine handle execution order automatically.
+**[Chevere Workflow](https://chevere.org/packages/workflow) for Laravel** is a PHP library for building and executing multi-step procedures with automatic dependency resolution. Define independent jobs that can run synchronously or asynchronously, pass data between them using typed responses, and let the engine handle execution order automatically.
 
 **Key features:**
 
@@ -45,7 +45,7 @@ You define jobs and how they connect and depend on each other, **Chevere Workflo
 
 ## How This Integration Works
 
-This Laravel package is a thin wrapper around `chevere/workflow`. It provides:
+This Laravel package is a thin wrapper around [chevere/workflow](https://chevere.org/packages/workflow). It provides:
 
 | Component                 | What It Does                                                                            |
 | ------------------------- | --------------------------------------------------------------------------------------- |
