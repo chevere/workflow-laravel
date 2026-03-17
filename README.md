@@ -877,7 +877,7 @@ Yes:
 
 ## Documentation
 
-Documentation is available at [chevere.org](https://chevere.org/packages/workflow-laravel).
+Documentation is available at [chevere.org/packages/workflow](https://chevere.org/packages/workflow-laravel).
 
 ## License
 

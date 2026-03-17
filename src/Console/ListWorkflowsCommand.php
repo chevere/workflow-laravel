@@ -15,6 +15,7 @@ namespace Chevere\Workflow\Laravel\Console;
 
 use Chevere\Workflow\Laravel\AbstractWorkflow;
 use Illuminate\Console\Command;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -31,9 +32,11 @@ class ListWorkflowsCommand extends Command
             $this->info('No workflows found.');
         } else {
             $rows = [];
+            /** @var Container $app */
+            $app = app();
             foreach ($workflows as $workflowClass) {
                 /** @var AbstractWorkflow $instance */
-                $instance = app()->make($workflowClass);
+                $instance = $app->make($workflowClass);
                 $graph = $instance->graph();
                 $jobCount = count($instance->getWorkflow());
                 $levels = count($graph);

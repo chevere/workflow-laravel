@@ -16,6 +16,7 @@ namespace Chevere\Workflow\Laravel\Console;
 use Chevere\Workflow\Interfaces\RunInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;
 use Illuminate\Console\Command;
+use Illuminate\Contracts\Container\Container;
 
 class RunWorkflowCommand extends Command
 {
@@ -41,8 +42,10 @@ class RunWorkflowCommand extends Command
         }
         $variables = $this->parseVariables();
         $this->info("Running workflow: {$workflowClass}");
+        /** @var Container $app */
+        $app = app();
         /** @var AbstractWorkflow $workflow */
-        $workflow = app()->make($workflowClass);
+        $workflow = $app->make($workflowClass);
         $this->printGraph($workflow);
         $run = $workflow->run(...$variables);
         $this->info('Workflow completed successfully.');
