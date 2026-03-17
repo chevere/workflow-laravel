@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests;
+namespace Chevere\Tests;
 
 use Chevere\Workflow\Laravel\WorkflowServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;

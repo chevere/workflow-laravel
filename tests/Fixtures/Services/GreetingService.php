@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests\Fixtures\Services;
+namespace Chevere\Tests\Fixtures\Services;
 
 /**
  * Simple service for testing dependency injection.

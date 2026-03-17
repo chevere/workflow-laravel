@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests\Fixtures\Actions;
+namespace Chevere\Tests\Fixtures\Actions;
 
 use Chevere\Action\Action;
-use Chevere\Workflow\Laravel\Tests\Fixtures\Services\GreetingService;
-use Chevere\Workflow\Laravel\Tests\Fixtures\Services\LoggerService;
+use Chevere\Tests\Fixtures\Services\GreetingService;
+use Chevere\Tests\Fixtures\Services\LoggerService;
 
 /**
  * Action with multiple constructor dependencies.

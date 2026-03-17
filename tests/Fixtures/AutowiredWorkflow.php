@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests\Fixtures;
+namespace Chevere\Tests\Fixtures;
 
+use Chevere\Tests\Fixtures\Actions\GreetAction;
 use Chevere\Workflow\Interfaces\WorkflowInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\Actions\GreetAction;
 use function Chevere\Workflow\sync;
 use function Chevere\Workflow\variable;
 use function Chevere\Workflow\workflow;

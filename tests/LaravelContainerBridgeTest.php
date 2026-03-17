@@ -11,17 +11,17 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests;
+namespace Chevere\Tests;
 
 use Chevere\Container\Interfaces\DependenciesInterface;
 use Chevere\Parameter\Interfaces\ObjectParameterInterface;
 use Chevere\Parameter\Interfaces\ParametersInterface;
 use Chevere\Parameter\Interfaces\TypeInterface;
+use Chevere\Tests\Fixtures\AutowiredWorkflow;
+use Chevere\Tests\Fixtures\Services\GreetingService;
 use Chevere\Workflow\Laravel\Exceptions\ContainerEntryNotFoundException;
 use Chevere\Workflow\Laravel\Exceptions\ParameterResolutionException;
 use Chevere\Workflow\Laravel\LaravelContainerBridge;
-use Chevere\Workflow\Laravel\Tests\Fixtures\AutowiredWorkflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\Services\GreetingService;
 use Exception;
 use Illuminate\Contracts\Container\Container as LaravelContainer;
 use Psr\Container\ContainerInterface;

@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests;
+namespace Chevere\Tests;
 
+use Chevere\Tests\Fixtures\GreetWorkflow;
+use Chevere\Tests\Fixtures\MathWorkflow;
 use Chevere\Workflow\Interfaces\RunInterface;
-use Chevere\Workflow\Laravel\Tests\Fixtures\GreetWorkflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\MathWorkflow;
 
 class AbstractWorkflowTest extends TestCase
 {

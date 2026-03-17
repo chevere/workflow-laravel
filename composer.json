@@ -1,6 +1,6 @@
 {
     "name": "chevere/workflow-laravel",
-    "description": "Laravel integration for Chevere Workflow.",
+    "description": "Chevere Workflow integration for Laravel.",
     "homepage": "https://chevere.org",
     "type": "library",
     "license": "Apache-2.0",
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "chevere/workflow": "^3.0.x-dev",
+        "chevere/workflow": "^3.0.7",
         "illuminate/support": "^10.0|^11.0|^12.0",
         "illuminate/console": "^10.0|^11.0|^12.0",
         "illuminate/contracts": "^10.0|^11.0|^12.0"
@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Chevere\\Workflow\\Laravel\\Tests\\": "tests/"
+            "Chevere\\Tests\\": "tests/"
         }
     },
     "extra": {

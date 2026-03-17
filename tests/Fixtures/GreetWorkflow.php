@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests\Fixtures;
+namespace Chevere\Tests\Fixtures;
 
 use Chevere\Workflow\Interfaces\WorkflowInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;

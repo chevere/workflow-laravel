@@ -11,10 +11,10 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests\Fixtures\Actions;
+namespace Chevere\Tests\Fixtures\Actions;
 
 use Chevere\Action\Action;
-use Chevere\Workflow\Laravel\Tests\Fixtures\Services\GreetingService;
+use Chevere\Tests\Fixtures\Services\GreetingService;
 
 /**
  * Action with constructor dependency that should be auto-resolved by Laravel.

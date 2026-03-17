@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests;
+namespace Chevere\Tests;
 
-use Chevere\Workflow\Laravel\Tests\Fixtures\GreetWorkflow;
+use Chevere\Tests\Fixtures\GreetWorkflow;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 class CommandTest extends TestCase

@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace Chevere\Workflow\Laravel\Tests;
+namespace Chevere\Tests;
 
+use Chevere\Tests\Fixtures\AutowiredWorkflow;
+use Chevere\Tests\Fixtures\MultiDependencyWorkflow;
+use Chevere\Tests\Fixtures\UserOnboardingWorkflow;
 use Chevere\Workflow\Interfaces\RunInterface;
 use Chevere\Workflow\Laravel\Facades\Workflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\AutowiredWorkflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\MultiDependencyWorkflow;
-use Chevere\Workflow\Laravel\Tests\Fixtures\UserOnboardingWorkflow;
 use Chevere\Workflow\Laravel\WorkflowManager;
 
 class DependencyInjectionTest extends TestCase
