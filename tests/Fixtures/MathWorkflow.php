@@ -14,15 +14,16 @@ declare(strict_types=1);
 namespace Chevere\Tests\Fixtures;
 
 use Chevere\Workflow\Interfaces\WorkflowInterface;
+use Chevere\Workflow\Interfaces\WorkflowProviderInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;
 use function Chevere\Workflow\response;
 use function Chevere\Workflow\sync;
 use function Chevere\Workflow\variable;
 use function Chevere\Workflow\workflow;
 
-class MathWorkflow extends AbstractWorkflow
+class MathWorkflow extends AbstractWorkflow implements WorkflowProviderInterface
 {
-    protected function definition(): WorkflowInterface
+    public static function workflow(): WorkflowInterface
     {
         return workflow(
             add: sync(
@@ -36,5 +37,10 @@ class MathWorkflow extends AbstractWorkflow
                 factor: variable('factor'),
             ),
         );
+    }
+
+    protected function definition(): WorkflowInterface
+    {
+        return self::workflow();
     }
 }

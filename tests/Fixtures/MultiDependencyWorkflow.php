@@ -15,6 +15,7 @@ namespace Chevere\Tests\Fixtures;
 
 use Chevere\Tests\Fixtures\Actions\ProcessAction;
 use Chevere\Workflow\Interfaces\WorkflowInterface;
+use Chevere\Workflow\Interfaces\WorkflowProviderInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;
 use function Chevere\Workflow\sync;
 use function Chevere\Workflow\variable;
@@ -23,9 +24,9 @@ use function Chevere\Workflow\workflow;
 /**
  * Workflow using action with multiple constructor dependencies.
  */
-class MultiDependencyWorkflow extends AbstractWorkflow
+class MultiDependencyWorkflow extends AbstractWorkflow implements WorkflowProviderInterface
 {
-    protected function definition(): WorkflowInterface
+    public static function workflow(): WorkflowInterface
     {
         return workflow(
             process: sync(
@@ -33,5 +34,10 @@ class MultiDependencyWorkflow extends AbstractWorkflow
                 name: variable('name'),
             ),
         );
+    }
+
+    protected function definition(): WorkflowInterface
+    {
+        return self::workflow();
     }
 }

@@ -15,6 +15,7 @@ namespace Chevere\Tests\Fixtures;
 
 use Chevere\Tests\Fixtures\Actions\GreetAction;
 use Chevere\Workflow\Interfaces\WorkflowInterface;
+use Chevere\Workflow\Interfaces\WorkflowProviderInterface;
 use Chevere\Workflow\Laravel\AbstractWorkflow;
 use function Chevere\Workflow\sync;
 use function Chevere\Workflow\variable;
@@ -24,9 +25,9 @@ use function Chevere\Workflow\workflow;
  * Workflow using action class with constructor dependencies.
  * Dependencies should be auto-resolved by Laravel container.
  */
-class AutowiredWorkflow extends AbstractWorkflow
+class AutowiredWorkflow extends AbstractWorkflow implements WorkflowProviderInterface
 {
-    protected function definition(): WorkflowInterface
+    public static function workflow(): WorkflowInterface
     {
         return workflow(
             greet: sync(
@@ -34,5 +35,10 @@ class AutowiredWorkflow extends AbstractWorkflow
                 name: variable('name'),
             ),
         );
+    }
+
+    protected function definition(): WorkflowInterface
+    {
+        return self::workflow();
     }
 }
