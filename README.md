@@ -59,7 +59,9 @@ This integration uses a PSR-11 bridge backed by Laravel's container, so your Lar
 
 ---
 
-## Installation
+## Installing
+
+Workflow for Laravel is available through [Packagist](https://packagist.org/packages/chevere/workflow-laravel) and the repository source is at [chevere/workflow-laravel](https://github.com/chevere/workflow-laravel).
 
 ### Step 1: Install the package
 
